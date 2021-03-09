@@ -156,3 +156,22 @@ const Keyboard = {
             }
         }
     },
+   
+    open(initialValue, oninput, onclose) {
+        this.properties.value = initialValue || "";
+        this.eventHandlers.oninput = oninput;
+        this.eventHandlers.onclose = onclose;
+        this.elements.main.classList.remove("keyboard--hidden");
+    },
+
+    close() {
+        this.properties.value = "";
+        this.eventHandlers.oninput = oninput;
+        this.eventHandlers.onclose = onclose;
+        this.elements.main.classList.add("keyboard--hidden");
+    }
+};
+
+window.addEventListener("DOMContentLoaded", function () {
+    Keyboard.init();
+});
