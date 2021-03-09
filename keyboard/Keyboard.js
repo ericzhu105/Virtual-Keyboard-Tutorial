@@ -42,3 +42,7 @@ const Keyboard = {
             "done", "z", "x", "c", "v", "b", "n", "m", ",", ".", "?",
             "space"
         ];
+     
+        const createIconHTML = (icon_name) => {
+            return `<i class="material-icons">${icon_name}</i>`;
+        };
